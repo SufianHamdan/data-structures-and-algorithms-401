@@ -2,5 +2,5 @@
 
 |#|Subject|Link|
 |-----|--------|--------|
-|1   |array-reverse|[array-reverse](./Challenge/codeChallenge.jpg)|
-|2   |    ||
+|1   |Challenge 1|[link](./Challenge/codeChallenge.jpg)|
+|2   |Challenge 2|[link](./Challenge/Array-insert-shift)|
