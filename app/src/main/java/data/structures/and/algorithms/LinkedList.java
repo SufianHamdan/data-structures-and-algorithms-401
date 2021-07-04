@@ -10,12 +10,10 @@ public class LinkedList<T> {
 
         Node<T> newNode = new Node<>(value);
 
-//        newNode.value = value;
-
-        if (this.head == null) {
-            this.head = newNode;
+        if (head == null) {
+            head = newNode;
         } else {
-            Node<T> tempRef = this.head;
+            Node<T> tempRef = head;
             while(tempRef.next != null){
                 tempRef = tempRef.next;
             }
@@ -27,11 +25,11 @@ public class LinkedList<T> {
     //Method to check if value is included or not(return true, false)
     public boolean isIncluded(T value){
 //
-//        if(this.head == null){
-//            return false;
-//        }
+        if(head == null){
+            return false;
+        }
 
-        Node<T> tempRef = this.head;
+        Node<T> tempRef = head;
 
         if(size != 0) {
             while (tempRef != null) {
@@ -47,24 +45,25 @@ public class LinkedList<T> {
 
     public String toString(){
 
-        Node<T> tempRef = this.head;
-        if(this.head == null){
+
+        if(head == null){
             return "Your List Empty";
         }
-
+        Node<T> tempRef = head;
         String result="";
-        while(tempRef.next != null){
+        while(tempRef != null){
 
             result = result + "{" + tempRef.value + "} -> ";
+
             tempRef = tempRef.next;
         }
-        return result + "{" + tempRef.value + "} -> Null";
+        return result +  "Null";
     }
 
     //Method returns the size of the list
     public void size(){
 
-        if(head.next == null){
+        if(head == null){
             System.out.println("List is empty");
         }else {
             System.out.println(size);
@@ -73,27 +72,23 @@ public class LinkedList<T> {
 
     //Method changes index value at position(override value)
     public void ChangeValueAtPosition(int position, T value){
-        Node<T> tempRef = this.head;
-        int count = 1;
-        if(this.head == null){
-            System.out.println("Linkedlist is empty");
+        Node<T> tempRef = head;
+
+        if(head == null){
+            System.out.println("List is empty");
             return;
         }
         if(position > size){
             System.out.println("Your Position is out of bounds");
             return;
         }
+        int count = 1;
+        while(tempRef != null){
 
-        while(tempRef.next != null){
-            if(position == 1){
-                tempRef.value = value;
-                break;
-            }
-            tempRef = tempRef.next;
-            count++;
             if(position == count){
                 tempRef.value = value;
             }
+            tempRef = tempRef.next;
         }
         System.out.println(value + " added at position " + position);
 

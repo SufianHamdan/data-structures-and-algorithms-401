@@ -13,12 +13,15 @@ public class App {
 
         list.insert(5);
         list.insert(10);
-//        list.insert(20);
-//        list.insert(25);
+        list.insert(20);
+        list.insert(25);
         list.ChangeValueAtPosition(6, 50);
-        System.out.println(list.isIncluded(50));
+
+        System.out.println("Does your value exist ? " + list.isIncluded(50));
+        System.out.println("Does your value exist ? " + list.isIncluded(25));
         System.out.println(list);
-//        list.size();
+        System.out.println("your List Size = " + list.size);
+
     }
 
 }
