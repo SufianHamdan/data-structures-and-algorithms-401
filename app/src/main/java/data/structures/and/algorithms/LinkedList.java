@@ -5,7 +5,7 @@ public class LinkedList<T> {
     int size;
 
 
-    // Method for insert data in linkedlist
+    // Method for insert data in linkedlist (at the end)
     public void insert(T value) {
 
         Node<T> newNode = new Node<>(value);
@@ -92,6 +92,26 @@ public class LinkedList<T> {
         }
         System.out.println(value + " added at position " + position);
 
+    }
+
+    public String insertBefore(T existNum, T valuebeforeExistNum){
+
+        boolean trueFalse = this.isIncluded(existNum);
+        if(!trueFalse){
+            return "Number doesn't exist";
+        }
+        Node<T> node = new Node<>(valuebeforeExistNum);
+        Node tempRef = head;
+        Node tempRef2 = tempRef;
+        while (tempRef.value != existNum){
+            tempRef2 = tempRef;
+            tempRef = tempRef.next;
+        }
+
+        tempRef2.next = node;
+        node.next = tempRef;
+
+        return "Number Added";
     }
 
 }
