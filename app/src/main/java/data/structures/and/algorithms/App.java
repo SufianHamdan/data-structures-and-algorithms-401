@@ -22,6 +22,8 @@ public class App {
 //        System.out.println(list);
 //        System.out.println("your List Size = " + list.size);
         System.out.println(list.insertBefore(10, 100));
+        System.out.println(list.insertBefore(5, 300));
+        System.out.println(list.insertBefore(25, 500));
         System.out.println(list);
 
     }

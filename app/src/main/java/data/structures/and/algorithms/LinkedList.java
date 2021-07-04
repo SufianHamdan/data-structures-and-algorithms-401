@@ -101,6 +101,13 @@ public class LinkedList<T> {
             return "Number doesn't exist";
         }
         Node<T> node = new Node<>(valuebeforeExistNum);
+        Node tempRefForFirstValue;
+        if(head.value == existNum){
+            tempRefForFirstValue = head;
+            head = node;
+            head.next = tempRefForFirstValue;
+        }
+
         Node tempRef = head;
         Node tempRef2 = tempRef;
         while (tempRef.value != existNum){

@@ -68,4 +68,17 @@ class AppTest {
         testList.insert(9);
         assertEquals(3, testList.size);
     }
+
+    @Test
+    public void testInsertBefore(){
+        testList = new LinkedList<>();
+        testList.insert(5);
+        testList.insert(6);
+        testList.insert(9);
+        testList.insertBefore(6, 13);
+        testList.insertBefore(5, 16);
+        assertEquals("{16} -> {5} -> {13} -> {6} -> {9} -> Null", testList.toString());
+    }
+
+
 }
