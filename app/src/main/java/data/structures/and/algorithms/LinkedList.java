@@ -49,6 +49,7 @@ public class LinkedList<T> {
         if(head == null){
             return "Your List Empty";
         }
+
         Node<T> tempRef = head;
         String result="";
         while(tempRef != null){
@@ -101,15 +102,15 @@ public class LinkedList<T> {
             return "Number doesn't exist";
         }
         Node<T> node = new Node<>(valuebeforeExistNum);
-        Node tempRefForFirstValue;
+        Node<T> tempRefForFirstValue;
         if(head.value == existNum){
             tempRefForFirstValue = head;
             head = node;
             head.next = tempRefForFirstValue;
         }
 
-        Node tempRef = head;
-        Node tempRef2 = tempRef;
+        Node<T> tempRef = head;
+        Node<T> tempRef2 = tempRef;
         while (tempRef.value != existNum){
             tempRef2 = tempRef;
             tempRef = tempRef.next;
@@ -121,4 +122,23 @@ public class LinkedList<T> {
         return "Number Added";
     }
 
+    public LinkedList<T> linkedListZip(LinkedList<T> one, LinkedList<T> two){
+
+        Node<T> tempRefOne = one.head;
+        Node<T> tempRefTwo = two.head;
+
+        LinkedList<T> mergedList = new LinkedList<>();
+
+        while (tempRefOne != null || tempRefTwo != null){
+            if(tempRefOne != null){
+                mergedList.insert(tempRefOne.value);
+                tempRefOne = tempRefOne.next;
+            }
+            if(tempRefTwo != null){
+                mergedList.insert(tempRefTwo.value);
+                tempRefTwo = tempRefTwo.next;
+            }
+        }
+        return mergedList;
+    }
 }

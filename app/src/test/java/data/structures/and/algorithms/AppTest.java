@@ -9,6 +9,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     private LinkedList<Integer> testList;
+    private LinkedList<Integer> testList1;
+    private LinkedList<Integer> testList2;
+    private LinkedList<Integer> mergedList;
 
     @Test
     public void testInsert(){
@@ -80,5 +83,78 @@ class AppTest {
         assertEquals("{16} -> {5} -> {13} -> {6} -> {9} -> Null", testList.toString());
     }
 
+    @Test
+    public void testLinkedListZip(){
+        testList1 = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        mergedList = new LinkedList<>();
 
+        testList1.insert(1);
+        testList1.insert(3);
+        testList1.insert(5);
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+
+        assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
+
+        testList1 = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        mergedList = new LinkedList<>();
+
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+
+
+        assertEquals("{2} -> {4} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
+
+        testList1 = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        mergedList = new LinkedList<>();
+
+
+        testList1.insert(2);
+        testList1.insert(4);
+        testList1.insert(6);
+
+
+        assertEquals("{2} -> {4} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
+
+        testList1 = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        mergedList = new LinkedList<>();
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+        testList2.insert(20);
+        testList2.insert(30);
+
+        testList1.insert(2);
+        testList1.insert(4);
+        testList1.insert(6);
+
+
+        assertEquals("{2} -> {2} -> {4} -> {4} -> {6} -> {6} -> {20} -> {30} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
+
+        testList1 = new LinkedList<>();
+        testList2 = new LinkedList<>();
+        mergedList = new LinkedList<>();
+
+        testList2.insert(2);
+        testList2.insert(4);
+        testList2.insert(6);
+
+        testList1.insert(2);
+        testList1.insert(4);
+        testList1.insert(6);
+        testList1.insert(20);
+        testList1.insert(30);
+
+
+        assertEquals("{2} -> {2} -> {4} -> {4} -> {6} -> {6} -> {20} -> {30} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
+    }
 }
