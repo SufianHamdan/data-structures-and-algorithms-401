@@ -5,26 +5,43 @@ package data.structures.and.algorithms;
 
 public class App {
 
-    static final LinkedList<Integer> list = new LinkedList<>();
+    static final LinkedList<Integer> list1 = new LinkedList<>();
+    static final LinkedList<Integer> list2 = new LinkedList<>();
+    static final LinkedList<Integer> merged = new LinkedList<>();
 
     public static void main(String[] args) {
 
 
 
-        list.insert(5);
-        list.insert(10);
-        list.insert(20);
-        list.insert(25);
+//        list.insert(5);
+//        list.insert(10);
+//        list.insert(20);
+//        list.insert(25);
 //        list.ChangeValueAtPosition(6, 50);
 //
 //        System.out.println("Does your value exist ? " + list.isIncluded(50));
 //        System.out.println("Does your value exist ? " + list.isIncluded(25));
 //        System.out.println(list);
 //        System.out.println("your List Size = " + list.size);
-        System.out.println(list.insertBefore(10, 100));
-        System.out.println(list.insertBefore(5, 300));
-        System.out.println(list.insertBefore(25, 500));
-        System.out.println(list);
+//        System.out.println(list.insertBefore(10, 100));
+//        System.out.println(list.insertBefore(5, 300));
+//        System.out.println(list.insertBefore(25, 500));
+//        System.out.println(list);
+
+
+        list1.insert(1);
+        list1.insert(3);
+        list1.insert(5);
+
+        list2.insert(2);
+        list2.insert(4);
+        list2.insert(6);
+
+
+        System.out.println(merged.linkedListZip(list1, list2));
+
+
+
 
     }
 
