@@ -122,6 +122,7 @@ public class LinkedList<T> {
         return "Number Added";
     }
 
+
     public LinkedList<T> linkedListZip(LinkedList<T> one, LinkedList<T> two){
 
         Node<T> tempRefOne = one.head;
@@ -141,4 +142,60 @@ public class LinkedList<T> {
         }
         return mergedList;
     }
+
+
+    /**
+     *
+     * @param k
+     * @return the value of this index (index start from the end)
+     */
+    public T kthFromEnd(int k){
+        if(k < 0 || head == null) {
+            return null;
+        }
+
+        Node<T> tempRef = head;
+        Node<T> tempRef2 = head;
+        int count = 0;
+
+        while(tempRef.next != null) {
+            tempRef = tempRef.next;
+            count++;
+            if(count > k) {
+                tempRef2 = tempRef2.next;
+            }
+        }
+
+        if(count < k) {
+            return null;
+        }
+        return tempRef2.value;
+
+    }
+
+    /**
+     * function for testing, returns the value of head, or returns null for an empty list.
+     */
+    public T getHeadValue() {
+        if(this.head == null) {
+            return null;
+        }
+        return this.head.value;
+    }
+
+    /**
+     * function for testing, returns the last value in the list, or returns null for an empty list.
+     */
+    public T getLastValue() {
+        if(this.head == null) {
+            return null;
+        }
+        Node<T> tempRef = this.head;
+        while(tempRef.next != null) {
+            tempRef = tempRef.next;
+        }
+        return tempRef.value;
+    }
+
+
 }
