@@ -29,18 +29,26 @@ public class App {
 //        System.out.println(list);
 
 
+//        list1.insert(1);
+//        list1.insert(3);
+//        list1.insert(5);
+//
+//        list2.insert(2);
+//        list2.insert(4);
+//        list2.insert(6);
+//
+//
+//        System.out.println(merged.linkedListZip(list1, list2));
+
+
         list1.insert(1);
         list1.insert(3);
-        list1.insert(5);
+        list1.insert(3);
+        list1.insert(1);
 
-        list2.insert(2);
-        list2.insert(4);
-        list2.insert(6);
-
-
-        System.out.println(merged.linkedListZip(list1, list2));
-
-
+        System.out.println(list1);
+        System.out.println(list1.isPalandrome(list1));
+        System.out.println(list1);
 
 
     }

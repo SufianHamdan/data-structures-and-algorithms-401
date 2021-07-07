@@ -1,5 +1,7 @@
 package data.structures.and.algorithms;
 
+import java.util.ArrayList;
+
 public class LinkedList<T> {
     Node<T> head;
     int size;
@@ -172,6 +174,73 @@ public class LinkedList<T> {
         return tempRef2.value;
 
     }
+
+    /**
+     *  function to reverse linked list
+     */
+
+    public void reverse()
+    {
+        // Initialize current, previous and
+        // next pointers
+        Node<T> current = head;
+        Node<T> prev = null;
+        Node<T> next;
+
+        while (current != null) {
+            // Store next
+            next = current.next;
+
+            // Reverse current node's pointer
+            current.next = prev;
+
+            // Move pointers one position ahead.
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+
+    /**
+     * palamdrom
+     */
+    public boolean isPalandrome(LinkedList<T> p){
+        ArrayList<T> t = new ArrayList<>();
+        Node<T> curr = p.head;
+        while (curr != null){
+            t.add(curr.value);
+            curr = curr.next;
+        }
+        if(t.size()%2==0) {
+            for (int i = 0; i < t.size() - 1; i++) {
+                for (int j = t.size() - 1; j > 0; j--) {
+                    if (t.get(i) == t.get(j)) {
+                        i++;
+                        continue;
+                    } else {
+                        i++;
+                        return false;
+                    }
+                }
+            }
+        }
+        else{
+            t.remove(size/2);
+            for (int i = 0; i < t.size() - 1; i++) {
+                for (int j = t.size() - 1; j > 0; j--) {
+                    if (t.get(i) == t.get(j)) {
+                        i++;
+                        continue;
+                    } else {
+                        i++;
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
 
     /**
      * function for testing, returns the value of head, or returns null for an empty list.
