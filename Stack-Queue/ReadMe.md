@@ -15,7 +15,7 @@ for the stack and queue i only manipulate the references to add, delete nodes
 <!-- Description of each method publicly available to your Stack and Queue-->
 **Stack Functions**
 * isEmpty() ---> check if the stack is empty return true or false
-* push(new Node) ---> add new node at the top 
+* push(new Node) ---> add new node at the top
 * pop() ---> delete from the top
 * peek() ---> returns the top value
 * toString() ---> print data

@@ -1,4 +1,6 @@
-public class Node<T>{
+package stack.Queue;
+
+public class Node<T> {
     Node<T> next;
     T value;
 

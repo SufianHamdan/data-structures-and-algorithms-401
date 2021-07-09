@@ -1,3 +1,5 @@
+package stack.Queue;
+
 public class Stack<T> {
     Node<T> top;
     int size;
@@ -5,7 +7,7 @@ public class Stack<T> {
     public void push(T value){
         Node<T> n =  new Node<>(value);
         if(top == null){
-           top = n;
+            top = n;
         }else{
             Node<T> tempRef = top;
             top = n;
@@ -60,7 +62,3 @@ public class Stack<T> {
     }
 
 }
-
-
-
-
