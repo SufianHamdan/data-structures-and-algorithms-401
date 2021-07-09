@@ -7,3 +7,4 @@
 |3   |Challenge 3|[link](./Challenge/array-binary-search)|
 |4   |Challenge 4|[link](./Challenge/InterView)|
 |5   |Challenge 5|[link](./app)|
+|6   |Stacks&Queue|[link](./Stack&Queues)|
