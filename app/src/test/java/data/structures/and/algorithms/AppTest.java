@@ -4,6 +4,7 @@
 package data.structures.and.algorithms;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -32,7 +33,7 @@ class AppTest {
         testList = new LinkedList<>();
         testList.insert(5);
         testList.insert(6);
-        assertEquals(true, testList.isIncluded(6));
+        assertTrue(testList.isIncluded(6));
     }
 
     @Test

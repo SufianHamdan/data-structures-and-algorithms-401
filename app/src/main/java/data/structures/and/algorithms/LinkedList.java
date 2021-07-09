@@ -174,6 +174,11 @@ public class LinkedList<T> {
     }
 
     /**
+     *  palandrome
+     */
+
+
+    /**
      * function for testing, returns the value of head, or returns null for an empty list.
      */
     public T getHeadValue() {
