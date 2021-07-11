@@ -3,12 +3,15 @@
  */
 package stack.Queue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    private Stack<Integer> stack;
+
     private Queue<Integer> queue;
+    private Stack<Integer> stack;
+    private PseudoQueue<Integer> pq;
 
     // Stack Tests
 
@@ -79,4 +82,29 @@ class AppTest {
         queue.dequeue();
         assertEquals(true, queue.isEmpty());
     }
+
+    /**
+     * Testing PseudoQueue
+     */
+    @Test void testEnqueue(){
+        pq = new PseudoQueue<>();
+        pq.enqueue(1);
+        pq.enqueue(2);
+        pq.enqueue(3);
+        assertEquals("[3, 2, 1]", pq.toString());
+    }
+
+    @Test void testDequeue(){
+        pq = new PseudoQueue<>();
+        pq.enqueue(1);
+        pq.enqueue(2);
+        pq.enqueue(3);
+        pq.dequeue();
+        assertEquals("[3, 2]", pq.toString());
+        pq.dequeue();
+        pq.dequeue();
+        assertEquals("[]", pq.toString());
+    }
+
+
 }

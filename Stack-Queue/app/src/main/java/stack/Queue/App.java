@@ -5,6 +5,9 @@ package stack.Queue;
 
 public class App {
     public static void main(String[] args) throws Exception{
+
+
+        // Stack object initialize and test
         /*
         Stack<String> s = new Stack<String>();
 
@@ -25,6 +28,9 @@ public class App {
 
          */
 
+
+        // Queue object initialize and test
+        /*
         Queue<String> q = new Queue<>();
         q.enqueue("s");
         q.enqueue("u");
@@ -39,7 +45,20 @@ public class App {
         System.out.println("Your New Queue Is: " + q.toString());
         System.out.println("Peeked value Is: " + q.peek());
         System.out.println("Is Your Queue Empty ? " + q.isEmpty());
+        */
 
+        // PseudoQueue object initialize and test
+
+        PseudoQueue<String> pq = new PseudoQueue<>();
+        pq.enqueue("s");
+        pq.enqueue("u");
+        pq.enqueue("f");
+        pq.enqueue("i");
+        pq.enqueue("a");
+        pq.enqueue("n");
+        System.out.println(pq.toString());
+        pq.dequeue();
+        System.out.println(pq.toString());
     }
 
 }

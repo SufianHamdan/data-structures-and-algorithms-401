@@ -44,10 +44,7 @@ public class Queue<T> {
     }
 
     public boolean isEmpty(){
-        if(front == null){
-            return true;
-        }
-        return false;
+        return front == null;
     }
 
     @Override
