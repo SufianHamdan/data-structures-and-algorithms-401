@@ -47,7 +47,7 @@ public class Stack<T> {
 
 
     public String toString(){
-        if(top == null){
+        if(isEmpty()){
             return "Your List Is Empty";
         }
 
