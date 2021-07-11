@@ -1,12 +1,14 @@
 package data.structures.and.algorithms;
 
+import java.util.ArrayList;
+
 public class LinkedList<T> {
     Node<T> head;
     int size;
 
 
-    // Method for insert data in linkedlist (at the end)
-    public void insert(T value) {
+    // Method for insert data in linkedList (at the end)
+    public void Append(T value) {
 
         Node<T> newNode = new Node<>(value);
 
@@ -132,11 +134,11 @@ public class LinkedList<T> {
 
         while (tempRefOne != null || tempRefTwo != null){
             if(tempRefOne != null){
-                mergedList.insert(tempRefOne.value);
+                mergedList.Append(tempRefOne.value);
                 tempRefOne = tempRefOne.next;
             }
             if(tempRefTwo != null){
-                mergedList.insert(tempRefTwo.value);
+                mergedList.Append(tempRefTwo.value);
                 tempRefTwo = tempRefTwo.next;
             }
         }
@@ -174,8 +176,20 @@ public class LinkedList<T> {
     }
 
     /**
-     *  palandrome
+     *  palindrome
      */
+    public boolean palindrome(LinkedList<T> l){
+        ArrayList<T> a = new ArrayList<>();
+        Node<T> tempRef = l.head;
+
+        while (tempRef != null){
+           a.add(tempRef.value);
+           head = head.next;
+           tempRef =head;
+
+        }
+        return false;
+    }
 
 
     /**

@@ -17,39 +17,39 @@ class AppTest {
     @Test
     public void testInsert(){
         testList = new LinkedList<>();
-        testList.insert(5);
+        testList.Append(5);
         assertEquals("{5} -> Null", testList.toString());
     }
 
     @Test
     public void testIsIncludedFalse(){
         testList = new LinkedList<>();
-        testList.insert(5);
+        testList.Append(5);
         assertEquals(false, testList.isIncluded(50));
     }
 
     @Test
     public void testIsIncludedTrue(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
+        testList.Append(5);
+        testList.Append(6);
         assertTrue(testList.isIncluded(6));
     }
 
     @Test
     public void testToString(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
+        testList.Append(5);
+        testList.Append(6);
         assertEquals("{5} -> {6} -> Null", testList.toString());
     }
 
     @Test
     public void testChangeValueAtPosition(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
-        testList.insert(9);
+        testList.Append(5);
+        testList.Append(6);
+        testList.Append(9);
         testList.ChangeValueAtPosition(2, 2);
         assertEquals("{5} -> {2} -> {9} -> Null", testList.toString());
     }
@@ -57,9 +57,9 @@ class AppTest {
     @Test
     public void testChangeValueAtPositionFalse(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
-        testList.insert(9);
+        testList.Append(5);
+        testList.Append(6);
+        testList.Append(9);
         testList.ChangeValueAtPosition(60, 2);
         assertEquals("{5} -> {6} -> {9} -> Null", testList.toString());
     }
@@ -67,18 +67,18 @@ class AppTest {
     @Test
     public void testSize(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
-        testList.insert(9);
+        testList.Append(5);
+        testList.Append(6);
+        testList.Append(9);
         assertEquals(3, testList.size);
     }
 
     @Test
     public void testInsertBefore(){
         testList = new LinkedList<>();
-        testList.insert(5);
-        testList.insert(6);
-        testList.insert(9);
+        testList.Append(5);
+        testList.Append(6);
+        testList.Append(9);
         testList.insertBefore(6, 13);
         testList.insertBefore(5, 16);
         assertEquals("{16} -> {5} -> {13} -> {6} -> {9} -> Null", testList.toString());
@@ -88,15 +88,15 @@ class AppTest {
         LinkedList<String> testList = new LinkedList<>();
         // Should return 'null' if called on empty list.
         assertNull(null, testList.kthFromEnd(0));
-        testList.insert("1");
+        testList.Append("1");
         //Should return first and only value '1' if k is '0'
         assertEquals("1", testList.kthFromEnd(0));
         // Should return 'null' if k > than the list length.
         assertNull(null, testList.kthFromEnd(2));
-        testList.insert("2");
-        testList.insert("3");
-        testList.insert("4");
-        testList.insert("5");
+        testList.Append("2");
+        testList.Append("3");
+        testList.Append("4");
+        testList.Append("5");
         // testList is now: {1, 2, 3, 4, 5}
         //Confirm '1' is at the head of list
         assertEquals("1", testList.getHeadValue());
@@ -126,13 +126,13 @@ class AppTest {
         testList2 = new LinkedList<>();
         mergedList = new LinkedList<>();
 
-        testList1.insert(1);
-        testList1.insert(3);
-        testList1.insert(5);
+        testList1.Append(1);
+        testList1.Append(3);
+        testList1.Append(5);
 
-        testList2.insert(2);
-        testList2.insert(4);
-        testList2.insert(6);
+        testList2.Append(2);
+        testList2.Append(4);
+        testList2.Append(6);
 
         assertEquals("{1} -> {2} -> {3} -> {4} -> {5} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
 
@@ -141,9 +141,9 @@ class AppTest {
         mergedList = new LinkedList<>();
 
 
-        testList2.insert(2);
-        testList2.insert(4);
-        testList2.insert(6);
+        testList2.Append(2);
+        testList2.Append(4);
+        testList2.Append(6);
 
 
         assertEquals("{2} -> {4} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
@@ -153,9 +153,9 @@ class AppTest {
         mergedList = new LinkedList<>();
 
 
-        testList1.insert(2);
-        testList1.insert(4);
-        testList1.insert(6);
+        testList1.Append(2);
+        testList1.Append(4);
+        testList1.Append(6);
 
 
         assertEquals("{2} -> {4} -> {6} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
@@ -164,15 +164,15 @@ class AppTest {
         testList2 = new LinkedList<>();
         mergedList = new LinkedList<>();
 
-        testList2.insert(2);
-        testList2.insert(4);
-        testList2.insert(6);
-        testList2.insert(20);
-        testList2.insert(30);
+        testList2.Append(2);
+        testList2.Append(4);
+        testList2.Append(6);
+        testList2.Append(20);
+        testList2.Append(30);
 
-        testList1.insert(2);
-        testList1.insert(4);
-        testList1.insert(6);
+        testList1.Append(2);
+        testList1.Append(4);
+        testList1.Append(6);
 
 
         assertEquals("{2} -> {2} -> {4} -> {4} -> {6} -> {6} -> {20} -> {30} -> Null", mergedList.linkedListZip(testList1, testList2).toString());
@@ -181,15 +181,15 @@ class AppTest {
         testList2 = new LinkedList<>();
         mergedList = new LinkedList<>();
 
-        testList2.insert(2);
-        testList2.insert(4);
-        testList2.insert(6);
+        testList2.Append(2);
+        testList2.Append(4);
+        testList2.Append(6);
 
-        testList1.insert(2);
-        testList1.insert(4);
-        testList1.insert(6);
-        testList1.insert(20);
-        testList1.insert(30);
+        testList1.Append(2);
+        testList1.Append(4);
+        testList1.Append(6);
+        testList1.Append(20);
+        testList1.Append(30);
 
 
         assertEquals("{2} -> {2} -> {4} -> {4} -> {6} -> {6} -> {20} -> {30} -> Null", mergedList.linkedListZip(testList1, testList2).toString());

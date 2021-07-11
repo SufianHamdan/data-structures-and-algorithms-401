@@ -29,13 +29,13 @@ public class App {
 //        System.out.println(list);
 
 
-        list1.insert(1);
-        list1.insert(3);
-        list1.insert(5);
+        list1.Append(1);
+        list1.Append(3);
+        list1.Append(5);
 
-        list2.insert(2);
-        list2.insert(4);
-        list2.insert(6);
+        list2.Append(2);
+        list2.Append(4);
+        list2.Append(6);
 
 
         System.out.println(merged.linkedListZip(list1, list2));

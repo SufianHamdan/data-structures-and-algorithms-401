@@ -15,3 +15,6 @@ OOP Approach easy to maintain
 insert: insert value at the end of the list(accept every data type).
 toString: convert the whole list to string.
 isIncludes: will check if the value is included (accept the value).
+
+
+![]()
