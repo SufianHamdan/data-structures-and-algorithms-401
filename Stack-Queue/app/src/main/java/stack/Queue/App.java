@@ -49,16 +49,29 @@ public class App {
 
         // PseudoQueue object initialize and test
 
-        PseudoQueue<String> pq = new PseudoQueue<>();
-        pq.enqueue("s");
-        pq.enqueue("u");
-        pq.enqueue("f");
-        pq.enqueue("i");
-        pq.enqueue("a");
-        pq.enqueue("n");
-        System.out.println(pq.toString());
-        pq.dequeue();
-        System.out.println(pq.toString());
+//        PseudoQueue<String> pq = new PseudoQueue<String>();
+//        pq.enqueue("s");
+//        pq.enqueue("u");
+//        pq.enqueue("f");
+//        pq.enqueue("i");
+//        pq.enqueue("a");
+//        pq.enqueue("n");
+//        System.out.println(pq.toString());
+//        pq.dequeue();
+//        System.out.println(pq.toString());
+
+        Animal cat = new Animal("cat");
+        Animal dog = new Animal("dog");
+
+        AnimalShelter s = new AnimalShelter();
+        s.enqueue(cat);
+        s.enqueue(dog);
+        System.out.println(s.toString());
+
+//        s.dequeue("cat");
+
     }
+
+
 
 }
