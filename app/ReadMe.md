@@ -12,9 +12,12 @@ implement methods (insert, toString, includes)
 OOP Approach easy to maintain
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-insert: insert value at the end of the list(accept every data type).
-toString: convert the whole list to string.
-isIncludes: will check if the value is included (accept the value).
 
+Functions Description:
+
+- insert: insert value at the end of the list(Accept every data type).
+- toString: convert the whole list to string.
+- isIncludes: will check if the value is included (Accept the value).
+- 
 
 ![]()

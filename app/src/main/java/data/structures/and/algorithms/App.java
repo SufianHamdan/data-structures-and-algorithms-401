@@ -13,32 +13,36 @@ public class App {
 
 
 
-//        list.insert(5);
-//        list.insert(10);
-//        list.insert(20);
-//        list.insert(25);
-//        list.ChangeValueAtPosition(6, 50);
+        list1.insert(5);
+        list1.insert(10);
+        list1.insert(20);
+        list1.insert(25);
+        list1.ChangeValueAtPosition(6, 50);
+
+        System.out.println("Does your value exist ? " + list1.isIncluded(50));
+        System.out.println("Does your value exist ? " + list1.isIncluded(25));
+        System.out.println(list1);
+        System.out.println("your List Size = " + list1.size);
+        System.out.println(list1.insertBefore(10, 100));
+        System.out.println(list1.insertBefore(5, 300));
+        System.out.println(list1.insertBefore(25, 500));
+        System.out.println(list1);
+
+
+        /**
+         *  next code for the merge lists
+         */
+
+//        list1.Append(1);
+//        list1.Append(3);
+//        list1.Append(5);
 //
-//        System.out.println("Does your value exist ? " + list.isIncluded(50));
-//        System.out.println("Does your value exist ? " + list.isIncluded(25));
-//        System.out.println(list);
-//        System.out.println("your List Size = " + list.size);
-//        System.out.println(list.insertBefore(10, 100));
-//        System.out.println(list.insertBefore(5, 300));
-//        System.out.println(list.insertBefore(25, 500));
-//        System.out.println(list);
-
-
-        list1.Append(1);
-        list1.Append(3);
-        list1.Append(5);
-
-        list2.Append(2);
-        list2.Append(4);
-        list2.Append(6);
-
-
-        System.out.println(merged.linkedListZip(list1, list2));
+//        list2.Append(2);
+//        list2.Append(4);
+//        list2.Append(6);
+//
+//
+//        System.out.println(merged.linkedListZip(list1, list2));
 
 
 

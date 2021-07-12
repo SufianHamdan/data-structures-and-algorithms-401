@@ -7,7 +7,10 @@ public class LinkedList<T> {
     int size;
 
 
-    // Method for insert data in linkedList (at the end)
+    /**
+     * Function to insert new node in the end of the linkedList
+     * @param value
+     */
     public void Append(T value) {
 
         Node<T> newNode = new Node<>(value);
@@ -24,7 +27,11 @@ public class LinkedList<T> {
         size++;
     }
 
-    //Method to check if value is included or not(return true, false)
+    /**
+     * Function to check if value is included or not
+     * @param value
+     * @return true, false
+     */
     public boolean isIncluded(T value){
 //
         if(head == null){
@@ -33,7 +40,6 @@ public class LinkedList<T> {
 
         Node<T> tempRef = head;
 
-        if(size != 0) {
             while (tempRef != null) {
 
                 if (tempRef.value == value) {
@@ -41,12 +47,15 @@ public class LinkedList<T> {
                 }
                 tempRef = tempRef.next;
             }
-        }
         return false;
     }
 
-    public String toString(){
+    /**
+     * This fucntion for printing out the data in the list
+     * @return text
+     */
 
+    public String toString(){
 
         if(head == null){
             return "Your List Empty";
@@ -63,7 +72,24 @@ public class LinkedList<T> {
         return result +  "Null";
     }
 
-    //Method returns the size of the list
+    /**
+     * This function insert a new node at the front of the linked list
+     * @param value
+     */
+    public void insert(T value){
+        Node<T> newNode = new Node<>(value);
+        if(size == 0){
+            head = newNode;
+        }else{
+            Node<T> tempRef = head;
+            head = newNode;
+            newNode.next = tempRef;
+        }
+    }
+
+    /**
+     * This function returns the size of the list
+     */
     public void size(){
 
         if(head == null){
@@ -97,13 +123,20 @@ public class LinkedList<T> {
 
     }
 
-    public String insertBefore(T existNum, T valuebeforeExistNum){
+    /**
+     * This function insert new node before specified node
+     * @param existNum
+     * @param newValue
+     * @return text if its added or the number doesn't exist
+     */
+
+    public String insertBefore(T existNum, T newValue){
 
         boolean trueFalse = this.isIncluded(existNum);
         if(!trueFalse){
             return "Number doesn't exist";
         }
-        Node<T> node = new Node<>(valuebeforeExistNum);
+        Node<T> node = new Node<>(newValue);
         Node<T> tempRefForFirstValue;
         if(head.value == existNum){
             tempRefForFirstValue = head;
@@ -124,6 +157,27 @@ public class LinkedList<T> {
         return "Number Added";
     }
 
+    public String insertAfter(T existNum, T newValue){
+        boolean trueFalse = this.isIncluded(existNum);
+        if(!trueFalse){
+            return "Number doesn't exist";
+        }
+        Node<T> newNode = new Node<>(newValue);
+        Node<T> tempRefForFirstValue;
+        if(head.value == existNum){
+            tempRefForFirstValue = head;
+            head = newNode;
+            head.next = tempRefForFirstValue;
+        }
+
+    }
+
+    /**
+     * This function merge 2 linked list 1 value from each one at a time
+     * @param one
+     * @param two
+     * @return new merged linked list
+     */
 
     public LinkedList<T> linkedListZip(LinkedList<T> one, LinkedList<T> two){
 
@@ -147,9 +201,9 @@ public class LinkedList<T> {
 
 
     /**
-     *
+     * This function returns the value of specified index but index start from the end
      * @param k
-     * @return the value of this index (index start from the end)
+     * @return the value of this index
      */
     public T kthFromEnd(int k){
         if(k < 0 || head == null) {
