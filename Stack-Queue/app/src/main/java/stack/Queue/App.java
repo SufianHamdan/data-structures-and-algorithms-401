@@ -3,6 +3,11 @@
  */
 package stack.Queue;
 
+import stack.Queue.FifoAnimalShelter.Animal;
+import stack.Queue.FifoAnimalShelter.AnimalShelter;
+import stack.Queue.FifoAnimalShelter.Cat;
+import stack.Queue.FifoAnimalShelter.Dog;
+
 public class App {
     public static void main(String[] args) throws Exception{
 
@@ -60,15 +65,22 @@ public class App {
 //        pq.dequeue();
 //        System.out.println(pq.toString());
 
-        Animal cat = new Animal("cat");
-        Animal dog = new Animal("dog");
+        AnimalShelter shelter = new AnimalShelter();
 
-        AnimalShelter s = new AnimalShelter();
-        s.enqueue(cat);
-        s.enqueue(dog);
-        System.out.println(s.toString());
+        Cat cat1 = new Cat("cat1");
+        Cat cat2 = new Cat("cat2");
+        Cat cat3 = new Cat("cat3");
+        Dog dog1 = new Dog("dog1");
+        Dog dog2 = new Dog("dog2");
 
-//        s.dequeue("cat");
+        shelter.enqueue(cat1);
+        shelter.enqueue(cat2);
+        shelter.enqueue(cat3);
+        shelter.enqueue(dog1);
+        shelter.enqueue(dog2);
+
+        Animal a = shelter.dequeue("cat");
+        System.out.println("Cat's Name is : " + a.getName());
 
     }
 

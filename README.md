@@ -8,3 +8,4 @@
 |4   |Challenge 4|[link](./Challenge/InterView)|
 |5   |Challenge 5|[link](./app)|
 |6   |Stacks&Queue|[link](./Stack-Queue)|
+|7   |multi-brackets|[link](./Stack-Queue/app/src/main/java/stack/Queue/multiBrackets)|

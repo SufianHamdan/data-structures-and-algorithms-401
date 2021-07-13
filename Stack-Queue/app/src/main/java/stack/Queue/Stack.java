@@ -16,6 +16,38 @@ public class Stack<T> {
         size++;
     }
 
+    /**
+     * helper function for multi brackets class
+     * @param value
+     */
+    public void pushChar(char value){
+        Node<Character> n =  new Node<>(value);
+        if(top == null){
+            top = (Node<T>) n;
+        }else{
+            Node<T> tempRef = top;
+            top = (Node<T>) n;
+            top.next = tempRef;
+        }
+        size++;
+    }
+
+    /**
+     * helper function for multi brackets class
+     * @param
+     */
+    public char popChar(){
+        if(top == null){
+            return 'n';
+        }
+
+        Node<T> tempRef = top;
+        top = top.next;
+        tempRef.next = null;
+        size--;
+        return (char) tempRef.value;
+    }
+
 
 
     public T pop(){
@@ -26,7 +58,7 @@ public class Stack<T> {
         Node<T> tempRef = top;
         top = top.next;
         tempRef.next = null;
-
+        size--;
         return tempRef.value;
     }
 
