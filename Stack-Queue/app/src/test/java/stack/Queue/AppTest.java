@@ -17,7 +17,7 @@ class AppTest {
 
 
     @Test void testStackPush() {
-        stack = new Stack<>();
+        stack = new Stack<Integer>();
         stack.push(5);
         assertEquals("Top -> {5} -> Null", stack.toString());
         stack.push(6);
@@ -27,7 +27,7 @@ class AppTest {
     }
 
     @Test void testStackPop() {
-        stack = new Stack<>();
+        stack = new Stack<Integer>();
         stack.push(5);
         stack.push(6);
         stack.push(7);
@@ -37,7 +37,7 @@ class AppTest {
     }
 
     @Test void testStackPeek() throws Exception {
-        stack = new Stack<>();
+        stack = new Stack<Integer>();
         stack.push(5);
         stack.push(6);
         assertEquals(6, stack.peek());
@@ -87,7 +87,7 @@ class AppTest {
      * Testing PseudoQueue
      */
     @Test void testEnqueue(){
-        pq = new PseudoQueue<>();
+        pq = new PseudoQueue<Integer>();
         pq.enqueue(1);
         pq.enqueue(2);
         pq.enqueue(3);
@@ -95,7 +95,7 @@ class AppTest {
     }
 
     @Test void testDequeue(){
-        pq = new PseudoQueue<>();
+        pq = new PseudoQueue<Integer>();
         pq.enqueue(1);
         pq.enqueue(2);
         pq.enqueue(3);
@@ -105,6 +105,8 @@ class AppTest {
         pq.dequeue();
         assertEquals("[]", pq.toString());
     }
+
+//    @Test void testAnimalShelter
 
 
 }

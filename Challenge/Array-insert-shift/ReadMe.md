@@ -1,0 +1,1 @@
+![Whiteboard](./challenge02.jpg)

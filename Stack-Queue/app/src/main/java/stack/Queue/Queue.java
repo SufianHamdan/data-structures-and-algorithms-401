@@ -1,22 +1,18 @@
 package stack.Queue;
 
+import java.util.List;
+
 public class Queue<T> {
     Node<T> front;
     Node<T> back;
-    int size;
-
-    public Queue(){
-        front = new Node<>();
-        back = front;
-        size = 0;
-    }
+    int size = 0;
 
 
-    public void enqueue(T value){
+    public void enqueue(T value) {
         Node<T> node = new Node<>(value);
-        if (size == 0){
+        if (isEmpty()) {
             front = node;
-        } else{
+        } else {
             back.next = node;
         }
         back = node;
@@ -24,10 +20,10 @@ public class Queue<T> {
     }
 
     public T dequeue() throws Exception {
-        if(front == null){
+        if (front == null) {
             throw new Exception("Your Queue Is Empty!");
         }
-        Node<T> tempRef= front;
+        Node<T> tempRef = front;
         front = front.next;
         tempRef.next = null;
         size--;
@@ -36,14 +32,14 @@ public class Queue<T> {
     }
 
     public T peek() throws Exception {
-        if(front == null){
+        if (front == null) {
             throw new Exception("Your Queue Is Empty!");
         }
 
         return front.value;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return front == null;
     }
 
@@ -61,6 +57,34 @@ public class Queue<T> {
         }
         print += "{" + tempRef.value + "} back -> Null";
         return print;
+    }
+
+    /**
+     * This Function for interview
+     *
+     * @param people
+     * @param k
+     * @return
+     */
+
+    public String duckDuckGoose(List<String> people, int k) throws Exception {
+        Queue<String> names = new Queue<>();
+        int counter = 0;
+        while (counter < people.size()) {
+            names.enqueue(people.get(counter));
+            counter++;
+        }
+            int kCount = 1;
+            while (names.size != 1){
+                if (kCount != k){
+                    names.enqueue(names.dequeue());
+                }else {
+                    names.dequeue();
+                    kCount = 0;
+                }
+                kCount++;
+        }
+        return names.dequeue();
     }
 
 }
