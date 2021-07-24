@@ -20,10 +20,12 @@ class AppTest {
         stack = new Stack<Integer>();
         stack.push(5);
         assertEquals("Top -> {5} -> Null", stack.toString());
+        assertEquals(1, stack.getSize());
         stack.push(6);
         stack.push(7);
         stack.push(8);
         assertEquals("Top -> {8} -> {7} -> {6} -> {5} -> Null", stack.toString());
+        assertEquals(4, stack.getSize());
     }
 
     @Test void testStackPop() {
@@ -31,9 +33,16 @@ class AppTest {
         stack.push(5);
         stack.push(6);
         stack.push(7);
+
         assertEquals(7, stack.pop());
+        assertEquals(2, stack.getSize());
+
+
         assertEquals(6, stack.pop());
+        assertEquals(1, stack.getSize());
+
         assertEquals(5, stack.pop());
+        assertEquals(0, stack.getSize());
     }
 
     @Test void testStackPeek() throws Exception {
@@ -41,12 +50,6 @@ class AppTest {
         stack.push(5);
         stack.push(6);
         assertEquals(6, stack.peek());
-        stack.pop();
-        stack.pop();
-        /*
-            i don't know how to test the Exception message
-         */
-//        assertEquals("Your Stack is Empty", stack.peek());
     }
 
     //Queue Tests

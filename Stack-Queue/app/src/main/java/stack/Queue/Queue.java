@@ -3,10 +3,14 @@ package stack.Queue;
 import java.util.List;
 
 public class Queue<T> {
-    Node<T> front;
-    Node<T> back;
-    int size = 0;
 
+    private Node<T> front;
+    private Node<T> back;
+    private int size = 0;
+
+    public int getSize() {
+        return size;
+    }
 
     public void enqueue(T value) {
         Node<T> node = new Node<>(value);

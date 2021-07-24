@@ -4,6 +4,10 @@ public class Stack<T> {
     Node<T> top;
     int size;
 
+    public int getSize() {
+        return size;
+    }
+
     public void push(T value){
         Node<T> n =  new Node<>(value);
         if(top == null){
