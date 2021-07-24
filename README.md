@@ -8,5 +8,6 @@
 |4   |Challenge 4|[InterView](./Challenge/InterView)|
 |5   |Challenge 5|[LinkedList](./app)|
 |6   |Challenge 6|[Stacks&Queue](./Stack-Queue)|
-|6   |Challenge 7|[F.I.F.O Animal Shelter](./Stack-Queue)|
-|7   |Challenge 8|[Multi-brackets](./Stack-Queue/app/src/main/java/stack/Queue/multiBrackets)|
+|7   |Challenge 7|[F.I.F.O Animal Shelter](./Stack-Queue)|
+|8   |Challenge 8|[Multi-brackets](./Stack-Queue/app/src/main/java/stack/Queue/multiBrackets)|
+|9   |Challenge 9|[Trees](./Stack-Queue/app)|
