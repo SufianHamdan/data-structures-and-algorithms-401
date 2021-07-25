@@ -51,6 +51,10 @@ public class BinaryTree {
         }
 
         if(node != null){
+            // get max value
+            if (maxValue == null || maxValue < node.getKey()){
+                maxValue = node.getKey();
+            }
             postOrderTravers(node.getLeft());
             postOrderTravers(node.getRight());
             System.out.print(" " + node.getKey());
@@ -65,6 +69,10 @@ public class BinaryTree {
         }
 
         if(node != null){
+            // get max value
+            if (maxValue == null || maxValue < node.getKey()){
+                maxValue = node.getKey();
+            }
             System.out.print(" " + node.getKey());
             preOrder.add(node.getKey());
             preOrderTravers(node.getLeft());
@@ -81,8 +89,6 @@ public class BinaryTree {
     }
 
     public Integer findMaxVal(){
-        Node node = root;
-        postOrderTravers(node);
         return maxValue;
     }
 }

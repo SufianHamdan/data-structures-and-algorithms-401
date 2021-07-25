@@ -28,6 +28,10 @@ public class App {
         binaryTree.preOrderTravers(binaryTree.getRoot());
         System.out.println();
 
+        System.out.println("Find Max Value");
+        System.out.println("Maximum Value is: " + binaryTree.findMaxVal());
+
+
 
         //Binary Search Tree
         System.out.println();

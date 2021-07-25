@@ -11,3 +11,4 @@
 |7   |Challenge 7|[F.I.F.O Animal Shelter](./Stack-Queue)|
 |8   |Challenge 8|[Multi-brackets](./Stack-Queue/app/src/main/java/stack/Queue/multiBrackets)|
 |9   |Challenge 9|[Trees](./Challenge/app)|
+|9   |Challenge 9|[Trees, find max value](./Challenge/app/src/whiteBoards/findMaxValue)|
