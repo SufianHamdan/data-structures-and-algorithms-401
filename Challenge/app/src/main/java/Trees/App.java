@@ -26,6 +26,8 @@ public class App {
 
         System.out.println("Preorder");
         binaryTree.preOrderTravers(binaryTree.getRoot());
+        System.out.println();
+
 
         //Binary Search Tree
         System.out.println();
