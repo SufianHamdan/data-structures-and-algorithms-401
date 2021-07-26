@@ -5,7 +5,7 @@ package Trees;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         BinaryTree binaryTree = new BinaryTree();
 
@@ -30,6 +30,9 @@ public class App {
 
         System.out.println("Find Max Value");
         System.out.println("Maximum Value is: " + binaryTree.findMaxVal());
+
+        System.out.println("Breadth First Values");
+        System.out.println(binaryTree.breadthFirst(binaryTree));
 
 
 
