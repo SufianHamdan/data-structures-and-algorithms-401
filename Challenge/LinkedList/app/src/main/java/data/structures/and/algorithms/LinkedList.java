@@ -169,7 +169,7 @@ public class LinkedList<T> {
             head = newNode;
             head.next = tempRefForFirstValue;
         }
-
+        return "number added";
     }
 
     /**

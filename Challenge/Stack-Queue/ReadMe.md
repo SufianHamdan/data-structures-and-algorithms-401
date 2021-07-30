@@ -26,3 +26,30 @@ for the stack and queue i only manipulate the references to add, delete nodes
 * dequeue() ---> delete from the front of the queue
 * peek() ---> returns the front value
 * toString() ---> print data
+
+# Challenge Summary
+<!-- Description of the challenge -->
+Create a class called AnimalShelter which holds only dogs and cats.
+The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+* enqueue
+Arguments: animal
+animal can be either a dog or a cat object.
+* dequeue
+Arguments: pref
+pref can be either "dog" or "cat"
+* Return: either a dog or a cat, based on preference.
+If pref is not "dog" or "cat" then return null.
+  
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![img](./visuals/duckDuckGoose.jpg)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Big of space is O(n square 2)
+Big of space is O(1)
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+Go to App class you can see the PseudoQueue object initialization
+and here you can see the [test](app/src/test/java/stack/Queue/AppTest.java)
