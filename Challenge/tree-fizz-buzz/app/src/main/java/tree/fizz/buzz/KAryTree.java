@@ -11,8 +11,6 @@ public class KAryTree<T> {
     private final List<Node<T>> KArayTreeNodes = new ArrayList<>();
 
     public KAryTree(List<T> values, int K){
-//        height = (int)Math.ceil((Math.log((double)values.size() * (K - 1)) / Math.log(K)) - 1) + 1;
-//        System.out.println(height);
         int arrayLength = values.size();
 
         if (arrayLength <= 0) {
@@ -36,6 +34,7 @@ public class KAryTree<T> {
             createKAryTree(values, K, KArayTreeNodes.get(index));
         }
     }
+
     // Function to print postorder traversal of the tree
     public void postorder(Node<T> root) {
         if (root == null) {
@@ -47,17 +46,40 @@ public class KAryTree<T> {
         System.out.print(root.getKey() + " ");
     }
 
-    public void treeFizzBuzz(){
+    public KAryTree<String> treeFizzBuzz(KAryTree<T> tree){
+        List<Node<T>> list = new ArrayList<>();
+        KAryTree<String> kAryTree = new KAryTree(list, 3);
+
         for (Node<T> kAryNode: KArayTreeNodes){
             if ((((Integer) kAryNode.getKey()) % 3 == 0) && (((Integer) kAryNode.getKey()) % 5 == 0)){
-                kAryNode.setKey((T) "FizzBuzz");
+                kAryTree.getKArayTreeNodes().add(new Node<>("FizzBuzz",3));
             }else if(((Integer) kAryNode.getKey()) % 3 == 0){
-                kAryNode.setKey((T) "Fizz");
+                kAryTree.getKArayTreeNodes().add(new Node<>("Fizz",3));
             }else if(((Integer) kAryNode.getKey()) % 5 == 0){
-                kAryNode.setKey((T) "Buzz");
+                kAryTree.getKArayTreeNodes().add(new Node<>("Buzz",3));
+            }else {
+                kAryTree.getKArayTreeNodes().add(new Node<>(kAryNode.getKey().toString(),3));
             }
         }
+        return kAryTree;
     }
+
+    public StringBuilder noOrder(KAryTree<T> tree){
+        List<Node<T>> list =tree.getKArayTreeNodes();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("{ ");
+        for (Node<T> node : list){
+            stringBuilder.append(" "+node.getKey()+" ");
+        }
+        stringBuilder.append(" }");
+        return stringBuilder;
+    }
+
+
+    private List<Node<T>> getKArayTreeNodes() {
+        return KArayTreeNodes;
+    }
+
     public Node<T> getRoot() {
         return root;
     }
