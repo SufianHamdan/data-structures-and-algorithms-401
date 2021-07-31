@@ -77,10 +77,10 @@ class AppTest {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.setRoot(new Node(10));
         binaryTree.getRoot().setLeft(new Node(6));
-        binaryTree.getRoot().setRight(new Node(4));
-        binaryTree.getRoot().getLeft().setLeft(new Node(2));
+        binaryTree.getRoot().setRight(new Node(-4));
+        binaryTree.getRoot().getLeft().setLeft(new Node(20));
 
-        assertEquals( 10, binaryTree.findMaxVal());
+        assertEquals( 10, binaryTree.getMaxValue());
     }
 
     @Test

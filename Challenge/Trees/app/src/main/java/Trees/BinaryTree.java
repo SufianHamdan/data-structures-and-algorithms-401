@@ -12,8 +12,7 @@ public class BinaryTree {
     public ArrayList<Integer> postOrder = new ArrayList<>();
 
 
-    private Integer maxValue;
-
+    private int max = 0;
 
     public ArrayList<Integer> getPreOrder() {
         return preOrder;
@@ -34,10 +33,6 @@ public class BinaryTree {
         }
 
         if(node != null){
-            // get max value
-            if (maxValue == null || maxValue < node.getKey()){
-                maxValue = node.getKey();
-            }
             inOrderTravers(node.getLeft());
             System.out.print(" " + node.getKey());
             inOrder.add(node.getKey());
@@ -53,10 +48,6 @@ public class BinaryTree {
         }
 
         if(node != null){
-            // get max value
-            if (maxValue == null || maxValue < node.getKey()){
-                maxValue = node.getKey();
-            }
             postOrderTravers(node.getLeft());
             postOrderTravers(node.getRight());
             System.out.print(" " + node.getKey());
@@ -71,10 +62,6 @@ public class BinaryTree {
         }
 
         if(node != null){
-            // get max value
-            if (maxValue == null || maxValue < node.getKey()){
-                maxValue = node.getKey();
-            }
             System.out.print(" " + node.getKey());
             preOrder.add(node.getKey());
             preOrderTravers(node.getLeft());
@@ -83,6 +70,28 @@ public class BinaryTree {
     }
 
 
+    public Integer getMaxValue(){
+        if (root == null) {
+            System.out.println("Tree is Empty!");
+            return null;
+        }
+        else {
+            findMaxHelper(root);
+        }
+
+        return max;
+    }
+
+    private void findMaxHelper(Node node){
+
+        if(node != null) {
+            if(node.getKey() > max){
+                max = node.getKey();
+            }
+            findMaxHelper(node.getLeft());
+            findMaxHelper(node.getRight());
+        }
+    }
 
     public Node getRoot() {
         return root;
@@ -90,10 +99,6 @@ public class BinaryTree {
 
     public void setRoot(Node root) {
         this.root = root;
-    }
-
-    public Integer findMaxVal(){
-        return maxValue;
     }
 
     public ArrayList<Integer> breadthFirst(BinaryTree tree) throws Exception {
@@ -120,6 +125,39 @@ public class BinaryTree {
             }
         }
         return result;
+    }
+
+    /**
+     * interview solution question number 1
+     * @param tree
+     * @return
+     * @throws Exception
+     */
+    public int sumOfOddNumbers(BinaryTree tree) throws Exception {
+
+        int sum = 0;
+
+        // Declare my Queue class to hold tree nodes
+        Queue<Node> nodes = new Queue<>();
+
+        if(tree.root != null) {
+            nodes.enqueue(tree.root);
+        }
+
+        while(nodes.getSize() > 0) {
+
+            Node temp = nodes.dequeue();
+
+            if(temp.getKey() % 2 != 0) sum = sum + temp.getKey();
+
+            if(temp.getLeft() != null) {
+                nodes.enqueue(temp.getLeft());
+            }
+            if(temp.getRight() != null) {
+                nodes.enqueue(temp.getRight());
+            }
+        }
+        return sum;
     }
 
 

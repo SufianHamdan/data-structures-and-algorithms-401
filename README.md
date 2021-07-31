@@ -14,5 +14,5 @@
 |7   |Challenge 7|[F.I.F.O Animal Shelter](./Challenge/Stack-Queue/app/src/main/java/stack/Queue/FifoAnimalShelter)|
 |8   |Challenge 8|[Multi-brackets](./Challenge/Stack-Queue/app/src/main/java/stack/Queue/multiBrackets)|
 |9   |Challenge 9|[Trees](./Challenge/Trees)|
-|9   |Challenge 10|[Trees, find max value](./Challenge/Trees)|
+|9   |Challenge 10|[Trees, find max value](./Challenge/Trees/app/src/whiteBoards/findMaxValue)|
 |9   |Challenge 11|[Trees, Breadth First Values](./Challenge/Trees/app/src/whiteBoards/breadthfirstTree)|
