@@ -23,50 +23,36 @@ the idea behind Insertion Sort is that it loops through the array and compare ea
 
 ```java
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
+        int arr[] = { 8,4,23,42,16,15 };
 
-        int [] arr = {8,4,23,42,16,15};
-        selectionSort(arr);
-        print(arr);
-    }
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.sort(arr);
 
-    public static void selectionSort(int[] arr){
+        for (int num: arr) {
+        System.out.println(num);
+        }
+        }
 
+        void sort(int arr[]) {
         int length = arr.length;
+        for (int i = 1; i < length; ++i) {
+        int key = arr[i];
+        int j = i - 1;
 
-        if(length > 0){
-            for(int i = 0; i < length - 1; i++){
-                int min = i;
-                for(int j = i + 1; j < length; j++){
-                    if (arr[j] < arr[min]){
-                        min = j;
-                    }
-
-                    int temp = arr[min];
-                    arr[min] = arr[i];
-                    arr[i] = temp;
-                }
-            }
-        }else {
-            System.out.println("Array is Empty!");
+        while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        j = j - 1;
         }
-
-    }
-
-    public static void print(int[] arr){
-        String result = "";
-        for(Integer e: arr){
-            result = result + e + ", ";
+        arr[j + 1] = key;
         }
-
-        System.out.println(result);
-    }
+        }
     
 ```
 
 # Trace
 
-
+![image](./whiteboard/selectionSort.jpg)
 
 # Efficiency
 

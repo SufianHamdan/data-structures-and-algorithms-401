@@ -6,9 +6,8 @@ package Selection.Sort;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class InsertionSortTest {
     @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+        InsertionSort classUnderTest = new InsertionSort();
     }
 }
