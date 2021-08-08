@@ -17,3 +17,4 @@
 |9   |Challenge 10|[Trees, find max value](./Challenge/Trees/app/src/whiteBoards/findMaxValue)|
 |9   |Challenge 11|[Trees, Breadth First Values](./Challenge/Trees/app/src/whiteBoards/breadthfirstTree)|
 |9   |Challenge 11|[Trees, K Ary Tree](./Challenge/tree-fizz-buzz)|
+|9   |Challenge 26|[Insertion Sort](./Challenge/Selection-Sort)|
