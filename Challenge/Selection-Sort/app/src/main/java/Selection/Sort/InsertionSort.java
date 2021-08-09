@@ -16,7 +16,7 @@ public class InsertionSort {
         }
     }
 
-    void sort(int arr[]) {
+    public void sort(int arr[]) {
         int length = arr.length;
         for (int i = 1; i < length; ++i) {
             int temp = arr[i];
