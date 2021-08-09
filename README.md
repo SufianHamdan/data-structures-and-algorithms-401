@@ -18,3 +18,4 @@
 |9   |Challenge 11|[Trees, Breadth First Values](./Challenge/Trees/app/src/whiteBoards/breadthfirstTree)|
 |9   |Challenge 11|[Trees, K Ary Tree](./Challenge/tree-fizz-buzz)|
 |9   |Challenge 26|[Insertion Sort](./Challenge/Selection-Sort)|
+|9   |Challenge 26|[Merge Sort](./Challenge/Merge-Sort)|
