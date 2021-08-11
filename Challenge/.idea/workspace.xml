@@ -5,87 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ab9486a-b7c7-4910-a49a-735cfc64e6b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Trees/.idea/Trees.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/Quick-Sort.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Challenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Challenge.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Trees/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Trees/BinarySearchTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Trees/BinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/Trees/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/Trees/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/whiteBoards/findMaxValue/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/whiteBoards/findMaxValue/findMaxValueImg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/libraries-with-intellij-classes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/ReadMe.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/DuckDuckGoose.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/FifoAnimalShelter/Animal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/FifoAnimalShelter/AnimalShelter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/FifoAnimalShelter/Cat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/FifoAnimalShelter/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/PseudoQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/Queue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/Stack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/multiBrackets/MultiBracket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/main/java/stack/Queue/multiBrackets/ReadMe.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/app/src/test/java/stack/Queue/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/hs_err_pid9012.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/hs_err_pid9648.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/hs_err_pid9980.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/replay_pid9012.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Stack-Queue/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/ReadMe.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Visuals/index-k-from-end.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Visuals/mergedlinkedlist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/data/structures/and/algorithms/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/data/structures/and/algorithms/LinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/main/java/data/structures/and/algorithms/Node.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/src/test/java/data/structures/and/algorithms/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Merge-Sort/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Merge-Sort/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,12 +21,22 @@
     <projectState path="$PROJECT_DIR$/LinkedList">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/Quick-Sort">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/Stack-Queue">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/Trees">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -116,6 +51,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\peter\data-structures-and-algorithms-401\Challenge\Quick-Sort\src\test" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuickSort" />
+      <module name="Challenge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QuickSort" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,5 +92,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
