@@ -20,3 +20,4 @@
 |13   |Challenge 26|[Insertion Sort](./Challenge/Selection-Sort)|
 |14   |Challenge 26|[Merge Sort](./Challenge/Merge-Sort)|
 |15   |Challenge 26|[Hash Table](./Challenge/HashTable)|
+|16   |Challenge 26|[hashmap-repeated-word](./Challenge/HashTable/repeated-word)|
