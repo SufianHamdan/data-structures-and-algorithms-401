@@ -16,4 +16,4 @@ First started out by drawing out the whiteboard then coded out the function, The
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![hashmap-repeated-word](/whteboard/hashmap-repeated-word.jpeg)
+![hashmap-repeated-word](./whteboard/hashmap-repeated-word.jpeg)
