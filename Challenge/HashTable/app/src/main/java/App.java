@@ -3,20 +3,31 @@
  */
 
 import HashTable.HashTable;
+import LinkedList.LinkedList;
 
 public class App {
 
     public static void main(String[] args) {
-        HashTable<Integer> map = new HashTable<Integer>();
-        map.add("Sufian", 1);
-        map.add("Abo_Mattar", 2);
-        map.add("Saed", 3);
-        System.out.println(map.getSize());
-        System.out.println(map.get("Sufian"));
-        System.out.println(map.remove("Sufian"));
-        System.out.println(map.getSize());
-        System.out.println(map.get("Sufian"));
-        System.out.println(map.get("Abo_Mattar"));
-        System.out.println(map.get("Saed"));
+//        HashTable<Integer> map = new HashTable<Integer>();
+//        map.add("Sufian", 1);
+//        map.add("Abo_Mattar", 2);
+//        map.add("Saed", 3);
+//        System.out.println(map.getSize());
+//        System.out.println(map.get("Sufian"));
+//        System.out.println(map.remove("Sufian"));
+//        System.out.println(map.getSize());
+//        System.out.println(map.get("Sufian"));
+//        System.out.println(map.get("Abo_Mattar"));
+//        System.out.println(map.get("Saed"));
+
+
+
+        // hashmap-repeated-word
+        String words = "Once upon a time, there was a";
+        HashTable<String> map = new HashTable<String>();
+        map.duplicatedWords(words);
+
+
+
     }
 }

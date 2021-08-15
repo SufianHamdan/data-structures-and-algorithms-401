@@ -32,6 +32,7 @@ public class HashTable<V> {
     private int getBucketIndex(String key) {
         int hashCode = hashCode(key);
         int index = hashCode % numBucket;
+        index = index < 0 ? index * -1 : index;
         return Math.abs(index);
     }
 
@@ -69,6 +70,7 @@ public class HashTable<V> {
             bucketArray = new LinkedList<HashNode<V>>();
             numBucket *=  2;
             size = 0;
+
             for (int index = 0; index < numBucket; index++) {
                 bucketArray.append(null);
             }
@@ -130,5 +132,24 @@ public class HashTable<V> {
         }
 
         return null;
+    }
+
+    public void duplicatedWords(String UserWords){
+
+        String[] words = UserWords.split(" ");
+//        LinkedList<String> duplicated = new LinkedList<String>();
+
+        HashTable<String> wordMap = new HashTable<String>();
+
+        for(int i=0;i<words.length;i++) {
+            String word = words[i].toUpperCase(); // for case insensitive comparison
+            if(wordMap.get(word)!=null) {
+                // we found a duplicated word!
+                System.out.println("Duplicated/Repeated word:"+word.toLowerCase());
+//                duplicated.add(word);
+            }else {
+                wordMap.add(word, word);
+            }
+        }
     }
 }
