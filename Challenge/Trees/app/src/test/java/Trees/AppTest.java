@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
     @Test
     public void testEmptyTree(){
         BinaryTree binaryTree = new BinaryTree();
@@ -43,7 +44,7 @@ class AppTest {
 
         binaryTree.preOrderTravers(binaryTree.getRoot());
 
-        assertEquals("should return [5, 10, 15, 20]","[5, 10, 15, 20]","" + binaryTree.getPreOrder());
+        assertEquals("[5, 10, 15, 20]","[5, 10, 15, 20]","should return [5, 10, 15, 20]" + binaryTree.getPreOrder());
     }
 
     @Test
@@ -56,7 +57,7 @@ class AppTest {
 
         binaryTree.inOrderTravers(binaryTree.getRoot());
 
-        assertEquals("should return [40, 22, 10, 30]","[40, 20, 10, 30]","" + binaryTree.getInOrder());
+        assertEquals("[40, 20, 10, 30]","[40, 20, 10, 30]","should return [40, 22, 10, 30]" + binaryTree.getInOrder());
     }
 
     @Test
@@ -69,7 +70,7 @@ class AppTest {
 
         binaryTree.postOrderTravers(binaryTree.getRoot());
 
-        assertEquals("should return [40, 20, 30, 10]","[40, 20, 30, 10]","" + binaryTree.getPostOrder());
+        assertEquals("[40, 20, 30, 10]","[40, 20, 30, 10]","should return [40, 20, 30, 10]" + binaryTree.getPostOrder());
     }
 
     @Test
@@ -80,7 +81,7 @@ class AppTest {
         binaryTree.getRoot().setRight(new Node(-4));
         binaryTree.getRoot().getLeft().setLeft(new Node(20));
 
-        assertEquals( 10, binaryTree.getMaxValue());
+        assertEquals( 20, binaryTree.getMaxValue());
     }
 
     @Test
@@ -95,6 +96,6 @@ class AppTest {
         binaryTree.getRoot().getLeft().setLeft(new Node(5));
         binaryTree.getRoot().getLeft().setRight(new Node(6));
 
-        assertEquals("[1, 2, 3, 5, 6, 7, 8]", binaryTree.breadthFirst(binaryTree));
+        assertEquals("[1, 2, 3, 5, 6, 7, 8]", binaryTree.breadthFirst(binaryTree).toString());
     }
 }

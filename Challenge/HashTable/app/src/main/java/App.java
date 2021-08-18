@@ -3,31 +3,23 @@
  */
 
 import HashTable.HashTable;
-import LinkedList.LinkedList;
 
 public class App {
 
     public static void main(String[] args) {
-//        HashTable<Integer> map = new HashTable<Integer>();
-//        map.add("Sufian", 1);
-//        map.add("Abo_Mattar", 2);
-//        map.add("Saed", 3);
-//        System.out.println(map.getSize());
-//        System.out.println(map.get("Sufian"));
-//        System.out.println(map.remove("Sufian"));
-//        System.out.println(map.getSize());
-//        System.out.println(map.get("Sufian"));
-//        System.out.println(map.get("Abo_Mattar"));
-//        System.out.println(map.get("Saed"));
 
+        HashTable<String, Integer> hashTable = new HashTable<String, Integer>();
+        hashTable.add("John", 300);
+        hashTable.add("Sally", 400);
+        hashTable.add("Tom", 200);
+        hashTable.add("Jade", 100);
 
-
-        // hashmap-repeated-word
-        String words = "Once upon a time, there was a";
-        HashTable<String> map = new HashTable<String>();
-        map.duplicatedWords(words);
-
-
+        System.out.println("The size is => " + hashTable.getSize());
+        System.out.println("The Sally allowance is => " + hashTable.get("Sally"));
+        System.out.println("Is Sally here => " + hashTable.contains("Sally"));
+        System.out.println("Is Sufian here => " + hashTable.contains("Sufian"));
+        System.out.println("Delete Sally => " + hashTable.remove("Sally"));
+        System.out.println("The size is => " + hashTable.getSize());
 
     }
 }

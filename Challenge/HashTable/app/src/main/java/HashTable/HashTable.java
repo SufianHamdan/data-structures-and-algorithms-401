@@ -1,39 +1,59 @@
 package HashTable;
 
-import HashTable.Data.HashNode;
-import LinkedList.LinkedList;
-
+import java.util.ArrayList;
 import java.util.Objects;
 
-public class HashTable<V> {
+public class HashTable<K, V> {
 
-    private LinkedList<HashNode<V>> bucketArray;
-    private int numBucket;
+    // bucket of hashnodes used to store linked list of
+    // hashnodes in each bucket when collisions occur
+    private ArrayList<HashNode<K, V>> bucketArray;
+
+    // will hold the current size of our bucketArray
+    private int numBuckets;
+
+    // will hold the total number of hashnodes in the bucket array
     private int size;
 
-
     public HashTable() {
-
-        bucketArray = new LinkedList<HashNode<V>>();
-        numBucket = 10;
+        bucketArray = new ArrayList<>();
+        numBuckets = 30;
         size = 0;
 
-        for (int index = 0; index < numBucket; index++) {
-            bucketArray.append(null);
+        // create bucket array
+        for (int index = 0; index < numBuckets; index++) {
+            bucketArray.add(null);
         }
-
     }
 
-    private int hashCode(String key) {
+    /**
+     * hashes the key using the built in java hash function,
+     * however you can build your own
+     *
+     * @param key any object
+     * @return hashcode of the key
+     */
+    private int hashCode(K key) {
         return Objects.hashCode(key);
     }
 
-
-    private int getBucketIndex(String key) {
+    /**
+     * Gets the index of where the value is located in the bucket array
+     *
+     * @param key any object
+     * @return bucket index
+     */
+    private int getBucketIndex(K key) {
         int hashCode = hashCode(key);
-        int index = hashCode % numBucket;
+
+        // this is to ensure the index is with in the bounds of the bucket array
+        int index = hashCode % numBuckets;
+
+        // hashCode can be negative (key.hashCode() can be -ve (negative))
+        // so we need to make it positive
         index = index < 0 ? index * -1 : index;
-        return Math.abs(index);
+
+        return index;
     }
 
     public int getSize() {
@@ -44,112 +64,134 @@ public class HashTable<V> {
         return getSize() == 0;
     }
 
-    public void add(String key, V value) {
+    /**
+     *
+     * @param key
+     * @param value
+     */
+    public void add(K key, V value) {
+
+        // gets the head of a linked list for a given key
         int bucketIndex = getBucketIndex(key);
         int hashCode = hashCode(key);
-        HashNode<V> head = bucketArray.get(bucketIndex);
 
+        HashNode<K, V> head = bucketArray.get(bucketIndex);
+
+        // check if key present
         while (head != null) {
-            if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
-                head.setValue(value);
+            if (head.key.equals(key) && head.hashCode == hashCode) {
+                head.value = value;
                 return;
             }
-            head = head.getNext();
+
+            head = head.next;
         }
+
+        // insert the value in to the position
         size++;
         head = bucketArray.get(bucketIndex);
-        HashNode<V> newNode = new HashNode<>(key, value, hashCode);
-        newNode.setNext(head);
+        HashNode<K, V> newNode = new HashNode<>(key, value, hashCode);
+        newNode.next = head;
         bucketArray.set(bucketIndex, newNode);
-        resize();
-    }
 
-    private void resize() {
-        if ((1.0 * size) / numBucket >= 0.7) {
-            LinkedList<HashNode<V>> temp = bucketArray;
-            bucketArray = new LinkedList<HashNode<V>>();
-            numBucket *=  2;
+        // if the load factor (number of hasnnodes) goes beyond the threshold
+        // double the hashtble aka the bucket array
+        if ((1.0 * size) / numBuckets >= 0.7) {
+            ArrayList<HashNode<K, V>> temp = bucketArray;
+            bucketArray = new ArrayList<>();
+            numBuckets = 2 * numBuckets;
             size = 0;
 
-            for (int index = 0; index < numBucket; index++) {
-                bucketArray.append(null);
+            for (int index = 0; index < numBuckets; index++) {
+                bucketArray.add(null);
             }
 
-            for (int i = 0; i <= temp.getSize(); i++) {
-                HashNode<V> headNode = temp.get(i);
+            for (HashNode<K, V> headNode : temp) {
                 while (headNode != null) {
-                    add(headNode.getKey(), headNode.getValue());
-                    headNode = headNode.getNext();
+                    add(headNode.key, headNode.value);
+                    headNode = headNode.next;
                 }
             }
-
         }
     }
 
-    public V remove(String key) {
+    /**
+     *
+     * @param key
+     * @return
+     */
+    public V remove(K key) {
+        // Apply hash function to find index for given key
         int bucketIndex = getBucketIndex(key);
         int hashCode = hashCode(key);
+        // Get head of chain
+        HashNode<K, V> head = bucketArray.get(bucketIndex);
 
-        HashNode<V> head = bucketArray.get(bucketIndex);
-
-        HashNode<V> prev = null;
-
+        // Search for key in its linked list
+        HashNode<K, V> prev = null;
         while (head != null) {
-            if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
+            // If Key found
+            if (head.key.equals(key) && hashCode == head.hashCode)
                 break;
-            }
+
+            // Else keep moving in chain
             prev = head;
-            head = head.getNext();
+            head = head.next;
         }
 
-        if (head == null) {
+        // If key was not there
+        if (head == null)
             return null;
-        }
 
+        // Reduce size
         size--;
 
-        if (prev != null) {
-            prev.setNext(head.getNext());
-        } else {
-            bucketArray.set(bucketIndex, head.getNext());
-        }
+        // Remove key
+        if (prev != null)
+            prev.next = head.next;
+        else
+            bucketArray.set(bucketIndex, head.next);
 
-        return head.getValue();
+        return head.value;
     }
 
+    public Boolean contains(K key){
+        int bucketIndex = getBucketIndex(key);
+        int hashCode = hashCode(key);
+        HashNode<K, V> head = bucketArray.get(bucketIndex);
 
-    public V get(String key) {
+        while (head != null) {
+            if (head.key.equals(key) && head.hashCode == hashCode) {
+                return true;
+            }
+
+            head = head.next;
+        }
+        return false;
+
+    }
+
+    /**
+     *
+     * @param key
+     * @return
+     */
+    public V get(K key) {
         int bucketIndex = getBucketIndex(key);
         int hashCode = hashCode(key);
 
-        HashNode<V> head = bucketArray.get(bucketIndex);
+        HashNode<K, V> head = bucketArray.get(bucketIndex);
 
+        // search the linnked list
         while (head != null) {
-            if (head.getKey().equals(key) && head.getHashCode() == hashCode) {
-                return head.getValue();
+            if (head.key.equals(key) && head.hashCode == hashCode) {
+                return head.value;
             }
-            head = head.getNext();
+
+            head = head.next;
         }
 
+        // key not found
         return null;
-    }
-
-    public void duplicatedWords(String UserWords){
-
-        String[] words = UserWords.split(" ");
-//        LinkedList<String> duplicated = new LinkedList<String>();
-
-        HashTable<String> wordMap = new HashTable<String>();
-
-        for(int i=0;i<words.length;i++) {
-            String word = words[i].toUpperCase(); // for case insensitive comparison
-            if(wordMap.get(word)!=null) {
-                // we found a duplicated word!
-                System.out.println("Duplicated/Repeated word:"+word.toLowerCase());
-//                duplicated.add(word);
-            }else {
-                wordMap.add(word, word);
-            }
-        }
     }
 }

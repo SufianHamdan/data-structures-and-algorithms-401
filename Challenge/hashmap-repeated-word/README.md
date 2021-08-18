@@ -2,6 +2,8 @@
 <!-- Short summary or background information -->
 Find the first repeated word in a String.
 
+Here are the [Code](./app/src/main/java/hashmap/repeated/word/App.java) and [Test](./app/src/test/java/hashmap/repeated/word/AppTest.java) classes.
+
 ## Challenge Description
 <!-- Description of the challenge -->
 * Write a function that accepts a lengthy string parameter.
@@ -16,4 +18,4 @@ First started out by drawing out the whiteboard then coded out the function, The
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![hashmap-repeated-word](../whteboard/hashmap-repeated-word.jpeg)
+![hashmap-repeated-word](./whiteboard/hashmap-repeated-word.jpeg)

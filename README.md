@@ -18,6 +18,7 @@
 |11   |Challenge 11|[Trees, Breadth First Values](./Challenge/Trees/app/src/whiteBoards/breadthfirstTree)|
 |12   |Challenge 11|[Trees, K Ary Tree](./Challenge/tree-fizz-buzz)|
 |13   |Challenge 26|[Insertion Sort](./Challenge/Selection-Sort)|
-|14   |Challenge 26|[Merge Sort](./Challenge/Merge-Sort)|
-|15   |Challenge 26|[Hash Table](./Challenge/HashTable)|
-|16   |Challenge 26|[hashmap-repeated-word](./Challenge/HashTable/repeated-word)|
+|14   |Challenge 27|[Merge Sort](./Challenge/Merge-Sort)|
+|14   |Challenge 28|[Quick Sort](./Challenge/Quick-sort)|
+|15   |Challenge 30|[Hash Table](./Challenge/HashTable)|
+|16   |Challenge 31|[hashmap-repeated-word](./Challenge/hashmap-repeated-word)|

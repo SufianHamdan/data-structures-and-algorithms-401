@@ -3,12 +3,54 @@
  */
 package Quick.sort;
 
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class AppTest {
-    @Test public void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+    App a = new App();
+    int[] emptyArr;
+    int[] integerArr;
+    int[] integerNegArr;
+    int[] uniquesIntegerArr;
+    int[] nearlySorted;
+
+    @Before
+    public void init() {
+        emptyArr = new int[0];
+        integerArr = new int[]{4, 25, 30, 15, 16};
+        integerNegArr = new int[]{4, -25, 30, 15, -15, 99, 3, 0};
+        uniquesIntegerArr = new int[]{5, 12, 7, 5, 5, 7};
+        nearlySorted = new int[]{2,3,5,7,13,11};
     }
+
+    @Test
+    public void testEmptyQuickSort() {
+        a.quickSort(emptyArr, 0, emptyArr.length - 1);
+        assertEquals("[]", Arrays.toString(emptyArr));
+    }
+
+    @Test
+    public void testNormalQuickSort() {
+        a.quickSort(integerArr, 0, integerArr.length - 1);
+        assertEquals("[4, 15, 16, 25, 30]", Arrays.toString(integerArr));
+    }
+
+
+    @Test
+    public void testQuickSortWithFewUniques() {
+        a.quickSort(uniquesIntegerArr, 0, uniquesIntegerArr.length - 1);
+        assertEquals("[5, 5, 5, 7, 7, 12]", Arrays.toString(uniquesIntegerArr));
+    }
+
+    @Test
+    public void testQuickSortNearlySortedNumbers() {
+        a.quickSort(nearlySorted, 0, nearlySorted.length - 1);
+        assertEquals("[2, 3, 5, 7, 11, 13]", Arrays.toString(nearlySorted));
+    }
+
 }

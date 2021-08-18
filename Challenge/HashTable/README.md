@@ -1,7 +1,8 @@
 # Hashtable
 <!-- Short summary or background information -->
 
-A hash table data structure was created from the ground up.
+A [hash table](./app/src/main/java) data structure was created from the ground up.
+A [Test](./app/src/test/java/HashTableTest.java) class to test hashtable functionalities.
 
 ## Challenge
 

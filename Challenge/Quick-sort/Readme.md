@@ -43,4 +43,5 @@ First went over the instructions, and looked over the pseudocode. Then I set up 
 
 ## Solution
 <!-- Embedded whiteboard image -->
+![img](screenshot/qucksortWhiteboard.jpg)
 ![img](screenshot/quck-sort.jpeg)

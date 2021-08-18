@@ -1,17 +1,13 @@
 # Challenge Summary
 <!-- Description of the challenge -->
 Sorting a single array by splitting it in half several times until they are sorted and can merge, and then merge it.
+Here are the [Code](./app/src/main/java/Merge/Sort/MergeSort.java) and [Test](./app/src/test/java/Merge/Sort/MergeSortTest.java) class.
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![1](./app/src/main/resources/1.jpeg)
-![1](./app/src/main/resources/2.jpeg)
-![1](./app/src/main/resources/3.jpeg)
-![1](./app/src/main/resources/4.jpeg)
-![1](./app/src/main/resources/5.jpeg)
-![1](./app/src/main/resources/6.jpeg)
-![1](./app/src/main/resources/7.jpeg)
-![1](./app/src/main/resources/8.jpeg)
+![1](./app/src/main/resources/mergeSort.jpeg)
+![1](./app/src/main/resources/mergeSortAlgorithm.jpeg)
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->

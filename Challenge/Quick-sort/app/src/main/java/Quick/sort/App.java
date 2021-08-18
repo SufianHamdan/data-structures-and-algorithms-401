@@ -10,28 +10,31 @@ public class App {
 
     public static void main(String[] args) {
 
+        App a = new App();
+
+
         System.out.println("Sample Array");
         int[] arr = {8, 4, 23, 42, 16, 15, 1, -1};
-        quickSort(arr,0,7);
+        a.quickSort(arr,0,7);
         System.out.println(Arrays.toString(arr));
 
         System.out.println("ReverseSorted Array");
         int[] ReverseSorted = {20, 18, 12, 8, 5, -2};
-        quickSort(ReverseSorted,0,5);
+        a.quickSort(ReverseSorted,0,5);
         System.out.println(Arrays.toString(ReverseSorted));
 
         System.out.println("FewUniques Array");
         int[] FewUniques = {5, 12, 7, 5, 5, 7};
-        quickSort(FewUniques,0,5);
+        a.quickSort(FewUniques,0,5);
         System.out.println(Arrays.toString(FewUniques));
 
         System.out.println("NearlySorted Array");
         int[] NearlySorted = {2, 3, 5, 7, 13, 11};
-        quickSort(NearlySorted,0,5);
+        a.quickSort(NearlySorted,0,5);
         System.out.println(Arrays.toString(NearlySorted));
     }
 
-    public static void quickSort(int[] arr, int left, int right) {
+    public void quickSort(int[] arr, int left, int right) {
         if (left < right) {
             int position = partition(arr, left, right);
             quickSort(arr, left, position - 1);
@@ -41,7 +44,7 @@ public class App {
 //        System.out.println("Left "+left + " Right "+right);
     }
 
-    public static int partition(int[] arr, int left, int right) {
+    private int partition(int[] arr, int left, int right) {
         int pivot = arr[right];
         int low = left - 1;
         for (int i = left; i < right; i++) {
@@ -55,7 +58,7 @@ public class App {
         return low + 1;
     }
 
-    public static void swap(int[] arr, int i, int low) {
+    private void swap(int[] arr, int i, int low) {
         int temp;
         temp = arr[i];
         arr[i] = arr[low];
