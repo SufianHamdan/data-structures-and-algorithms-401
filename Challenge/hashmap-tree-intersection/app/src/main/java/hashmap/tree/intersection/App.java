@@ -20,7 +20,7 @@ public class App {
         tree1.getRoot().setLeft(new Node(100));
         tree1.getRoot().setRight(new Node(250));
         tree1.getRoot().getLeft().setLeft(new Node(75));
-        tree1.getRoot().getLeft().setLeft(new Node(160));
+        tree1.getRoot().getLeft().setRight(new Node(160));
         tree1.getRoot().getRight().setLeft(new Node(200));
         tree1.getRoot().getRight().setRight(new Node(350));
         tree1.getRoot().getLeft().getRight().setLeft(new Node(125));
@@ -28,13 +28,12 @@ public class App {
         tree1.getRoot().getRight().getRight().setLeft(new Node(300));
         tree1.getRoot().getRight().getRight().setRight(new Node(500));
 
-
         BinaryTree tree2 = new BinaryTree();
         tree2.setRoot(new Node(42));
         tree2.getRoot().setLeft(new Node(100));
         tree2.getRoot().setRight(new Node(600));
         tree2.getRoot().getLeft().setLeft(new Node(15));
-        tree2.getRoot().getLeft().setLeft(new Node(160));
+        tree2.getRoot().getLeft().setRight(new Node(160));
         tree2.getRoot().getRight().setLeft(new Node(200));
         tree2.getRoot().getRight().setRight(new Node(350));
         tree2.getRoot().getLeft().getRight().setLeft(new Node(125));
@@ -56,17 +55,16 @@ public class App {
         return intersections;
     }
 
-    public void traverse(Node node) {
+    private void traverse(Node node) {
         if (node != null) {
-            int count = hashMap.get(node.getKey()) == null ? 1 : hashMap.get(node.getKey()) + 1;
-            hashMap.put(node.getKey(),count);
+            hashMap.put(node.getKey(), 1); // constant value cuz i only need the key to compare
 
             traverse(node.getLeft());
             traverse(node.getRight());
         }
     }
 
-    public void compare(Node node){
+    private void compare(Node node){
         if (node != null) {
             if (hashMap.get(node.getKey()) != null){
                 intersections.add(node.getKey());
@@ -75,4 +73,6 @@ public class App {
             compare(node.getRight());
         }
     }
+
+
 }
