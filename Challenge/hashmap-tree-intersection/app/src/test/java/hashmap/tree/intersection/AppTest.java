@@ -3,12 +3,84 @@
  */
 package hashmap.tree.intersection;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+    BinaryTree emptyTree;
+    BinaryTree normalTree;
+    BinaryTree threeNodes;
+    BinaryTree onlyLeftNodes;
+
+    @BeforeEach
+    public void beforeEachTest(){
+        emptyTree = new BinaryTree();
+        normalTree = new BinaryTree();
+        threeNodes = new BinaryTree();
+        onlyLeftNodes = new BinaryTree();
+
+        normalTree.setRoot(new Node(10));
+        normalTree.getRoot().setLeft(new Node(20));
+        normalTree.getRoot().setRight(new Node(30));
+        normalTree.getRoot().getLeft().setLeft(new Node(40));
+        normalTree.getRoot().getLeft().setRight(new Node(40));
+        normalTree.getRoot().getRight().setLeft(new Node(50));
+        normalTree.getRoot().getRight().setRight(new Node(60));
+
+        threeNodes.setRoot(new Node(10));
+        threeNodes.getRoot().setLeft(new Node(20));
+        threeNodes.getRoot().setRight(new Node(150));
+
+
+        onlyLeftNodes.setRoot(new Node(10));
+        onlyLeftNodes.getRoot().setLeft(new Node(20));
+        onlyLeftNodes.getRoot().getLeft().setLeft(new Node(30));
+        onlyLeftNodes.getRoot().getLeft().getLeft().setLeft(new Node(150));
+    }
+
+    @Test
+    public void testWithOneEmptyTree(){
+        App app = new App();
+        List<Integer> repeated = app.treeIntersection(emptyTree, normalTree);
+
+        assertNull(repeated);
+    }
+
+    @Test
+    public void testWithTreeHasThreeNodes(){
+        App app = new App();
+        List<Integer> repeated = app.treeIntersection(threeNodes, normalTree);
+
+        assertEquals("[10, 20]", repeated.toString());
+    }
+
+
+    @Test
+    public void testWithTreeHasLeftNodes(){
+        App app = new App();
+        List<Integer> repeated = app.treeIntersection(onlyLeftNodes, normalTree);
+
+        assertEquals("[10, 20, 30]", repeated.toString());
+    }
+
+    @Test
+    public void testTreesHasRandomNodes(){
+        App app = new App();
+        List<Integer> repeated = app.treeIntersection(onlyLeftNodes, threeNodes);
+
+        assertEquals("[10, 20, 150]", repeated.toString());
+    }
+
+    @Test
+    public void testSameTree(){
+        App app = new App();
+        List<Integer> repeated = app.treeIntersection(normalTree, normalTree);
+
+        assertEquals("[10, 20, 40, 40, 30, 50, 60]", repeated.toString());
     }
 }
