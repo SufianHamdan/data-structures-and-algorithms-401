@@ -22,3 +22,4 @@
 |14   |Challenge 28|[Quick Sort](./Challenge/Quick-sort)|
 |15   |Challenge 30|[Hash Table](./Challenge/HashTable)|
 |16   |Challenge 31|[hashmap-repeated-word](./Challenge/hashmap-repeated-word)|
+|17   |Challenge 32|[hashmap-tree-intersection](./Challenge/hashmap-tree-intersection)|
