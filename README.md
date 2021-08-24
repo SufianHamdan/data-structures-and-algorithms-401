@@ -23,3 +23,6 @@
 |15   |Challenge 30|[Hash Table](./Challenge/HashTable)|
 |16   |Challenge 31|[hashmap-repeated-word](./Challenge/hashmap-repeated-word)|
 |17   |Challenge 32|[hashmap-tree-intersection](./Challenge/hashmap-tree-intersection)|
+|18   |Challenge 33|[hashmap-left-join](./Challenge/HashMapLeftJoin)|
+|19   |Challenge 34|[Graph](./Challenge/Graph)|
+|20   |Challenge 35|[graph-breadth-first](./Challenge/Graph)|
