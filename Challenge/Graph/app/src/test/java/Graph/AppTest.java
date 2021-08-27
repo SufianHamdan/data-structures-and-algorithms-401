@@ -4,6 +4,11 @@
 package Graph;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -69,10 +74,10 @@ class AppTest {
 
         graph.addVertex("Sufian");
         graph.addVertex("Ahmad");
-        graph.addVertex("Mahmoud3");
+        graph.addVertex("Sally");
 
         graph.addEdge("Sufian","Ahmad",3);
-        graph.addEdge("Sufian","Mahmoud3",2);
+        graph.addEdge("Sufian","Sally",2);
 
         assertEquals(2, graph.getNeighbors("Sufian").size());
         assertEquals(3, graph.getNeighbors("Sufian").get(0).weight);
@@ -100,5 +105,123 @@ class AppTest {
         assertTrue( graph.getNeighbors("Sufian").contains(new Vertex("Sufian")));
         assertEquals(1, graph.getVertices().size());
 
+    }
+
+    @Test
+    public void graphBreadthFirst() throws Exception {
+        GraphClass graph = new GraphClass();
+        graph.addVertex("Pandora");
+        graph.addVertex("Arendelle");
+        graph.addVertex("Metroville");
+        graph.addVertex("Monstroplolis");
+        graph.addVertex("Narnia");
+        graph.addVertex("Naboo");
+
+        graph.addEdge("Pandora","Arendelle");
+        graph.addEdge("Arendelle","Metroville");
+        graph.addEdge("Arendelle","Monstroplolis");
+        graph.addEdge("Metroville","Narnia");
+        graph.addEdge("Metroville","Naboo");
+        graph.addEdge("Monstroplolis","Metroville");
+        graph.addEdge("Monstroplolis","Naboo");
+        graph.addEdge("Naboo","Narnia");
+
+        List<String> bf = graph.breadthTraverse("Pandora");
+
+        System.out.println(bf);
+        assertEquals("Pandora",bf.get(0));
+        assertEquals("Arendelle",bf.get(1));
+        assertEquals("Metroville",bf.get(2));
+        assertEquals("Monstroplolis",bf.get(3));
+        assertEquals("Narnia",bf.get(4));
+        assertEquals("Naboo",bf.get(5));
+    }
+
+    @Test
+    public void testBusinessTrip(){
+        App app = new App();
+        GraphClass citiesGraph = new GraphClass();
+        citiesGraph.addVertex("Pandora");
+        citiesGraph.addVertex("Arendelle");
+        citiesGraph.addVertex("Metroville");
+        citiesGraph.addVertex("Monstroplolis");
+        citiesGraph.addVertex("Narnia");
+        citiesGraph.addVertex("Naboo");
+
+        citiesGraph.addEdge("Pandora","Arendelle",150);
+        citiesGraph.addEdge("Arendelle","Metroville",99);
+        citiesGraph.addEdge("Arendelle","Monstroplolis",42);
+        citiesGraph.addEdge("Metroville","Narnia", 37);
+        citiesGraph.addEdge("Metroville","Pandora", 82);
+        citiesGraph.addEdge("Metroville","Naboo", 26);
+        citiesGraph.addEdge("Monstroplolis","Metroville", 105);
+        citiesGraph.addEdge("Monstroplolis","Naboo", 73);
+        citiesGraph.addEdge("Naboo","Narnia", 250);
+
+        List<String> citiesArr = new ArrayList<>();
+        citiesArr.add("Metroville");
+        citiesArr.add("Pandora");
+
+        List<String> citiesArr2 = new ArrayList<>();
+        citiesArr2.add("Arendelle");
+        citiesArr2.add("Monstroplolis");
+        citiesArr2.add("Naboo");
+
+
+        List<String> citiesArr3 = new ArrayList<>();
+        citiesArr3.add("Naboo");
+        citiesArr3.add("Pandora");
+
+        List<String> citiesArr4 = new ArrayList<>();
+
+        assertEquals(82, app.businessTripCost(citiesGraph, citiesArr));
+        assertEquals(115, app.businessTripCost(citiesGraph, citiesArr2));
+        assertEquals(0, app.businessTripCost(citiesGraph, citiesArr3));
+        assertEquals(0, app.businessTripCost(citiesGraph, citiesArr4));
+    }
+
+    @Test
+    public void testDepthFirstTraverse(){
+        App app = new App();
+        GraphClass graph = new GraphClass();
+        graph.addVertex("A");
+        graph.addVertex("B");
+        graph.addVertex("C");
+        graph.addVertex("D");
+        graph.addVertex("E");
+        graph.addVertex("F");
+        graph.addVertex("G");
+        graph.addVertex("H");
+
+        graph.addEdge("A","D");
+        graph.addEdge("A","B");
+        graph.addEdge("B","D");
+        graph.addEdge("B","C");
+        graph.addEdge("C","G");
+        graph.addEdge("D","F");
+        graph.addEdge("D","H");
+        graph.addEdge("D","E");
+        graph.addEdge("F","H");
+
+        List<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("G");
+        list.add("D");
+        list.add("E");
+        list.add("H");
+        list.add("F");
+
+        Set<String> result = graph.depthFirstTraverse("A");
+
+        assertTrue(result.contains(list.get(0)));
+        assertTrue(result.contains(list.get(1)));
+        assertTrue(result.contains(list.get(2)));
+        assertTrue(result.contains(list.get(3)));
+        assertTrue(result.contains(list.get(4)));
+        assertTrue(result.contains(list.get(5)));
+        assertTrue(result.contains(list.get(6)));
+        assertTrue(result.contains(list.get(7)));
     }
 }

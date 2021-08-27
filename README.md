@@ -26,3 +26,5 @@
 |18   |Challenge 33|[hashmap-left-join](./Challenge/HashMapLeftJoin)|
 |19   |Challenge 34|[Graph](./Challenge/Graph)|
 |20   |Challenge 35|[graph-breadth-first](./Challenge/Graph)|
+|21   |Challenge 36|[graph-business-trip(code is in app class)](./Challenge/Graph/graph-business-trip)|
+|21   |Challenge 36|[graph-depth-first](./Challenge/Graph/graph-depth-first)|
